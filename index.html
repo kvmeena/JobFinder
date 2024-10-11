@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Job Finder</div>
+        <nav>
+            <button id="homeButton">Home</button>
+            <button id="loginButton">Login</button>
+            <button id="createAccountButton">Create Account</button>
+            <button id="postJobButton">Post Job</button>
+        </nav>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search for jobs...">
+            <button id="searchButton">Search</button>
+        </div>
+        <section id="jobListings">
+            <h2>Latest Jobs in Your Area</h2>
+            <ul id="jobsList">
+                <!-- Job listings will be dynamically inserted here -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Account Modal -->
+    <div id="createAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeCreateAccount">&times;</span>
+            <h2>Create Account</h2>
+            <form id="createAccountForm">
+                <label for="createEmail">Email:</label>
+                <input type="email" id="createEmail" required>
+                <label for="createPassword">Password:</label>
+                <input type="password" id="createPassword" required>
+                <label for="bankAccountNumber">Bank Account Number:</label>
+                <input type="text" id="bankAccountNumber" required>
+                <label for="ifscCode">IFSC Code:</label>
+                <input type="text" id="ifscCode" required>
+                <label for="identityProof">Identity Proof:</label>
+                <select id="identityProof" required>
+                    <option value="">Select Identity Proof</option>
+                    <option value="Aadhar">Aadhar Card</option>
+                    <option value="VoterID">Voter ID</option>
+                    <option value="Passport">Passport</option>
+                    <option value="DrivingLicense">Driving License</option>
+                </select>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Post Job Modal -->
+    <div id="postJobModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closePostJob">&times;</span>
+            <h2>Post Job</h2>
+            <form id="postJobForm">
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" required>
+                <label for="approxTime">Approximate Time (in hours):</label>
+                <input type="number" id="approxTime" required>
+                <label for="amount">Amount per Hour:</label>
+                <input type="number" id="amount" required>
+                <label for="location">Location:</label>
+                <input type="text" id="location" required>
+                <label for="jobImage">Upload Image:</label>
+                <input type="file" id="jobImage" accept="image/*" required>
+                <button type="submit">Post Job</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
